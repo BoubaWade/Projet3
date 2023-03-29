@@ -17,27 +17,29 @@ main{
         width: 100%;
         background: rgba(215, 214, 214, 0.244);
         text-align: center;
-        padding: 30px 0 40px;
-        margin-bottom: 50px;
+        padding-bottom:40px;
+        margin-bottom: 40px;
 
         h1{
             width:80%;
-            margin: 0 auto;
+            margin: 20px auto;
             line-height: 25px;
         }
         h2{
             width: 80%;
-            font-family: $font2;
             font-size: .9rem;
-            font-weight: 500;
+            font-weight: 400;
             margin: 10px auto 25px;
         }
     }
     .functioning{
         width: 90%;
+        h2{
+            font-size: 1.3rem;
+        }
         .functioning-cards-container{
             width: 100%;
-            padding: 20px 0 50px;
+            padding: 20px 0 40px;
             margin-left: 6px;
             gap: 20px;
             .functioning-card{
@@ -49,8 +51,8 @@ main{
                 margin-bottom: 15px;
                 box-shadow: $shadow-box;
                 cursor: pointer;
-                h4{
-                    font-size: .9rem;
+                h3{
+                    font-size: .8rem;
                     margin-left: 20px;
                 }
                 p{
@@ -63,8 +65,6 @@ main{
                     @include center-box;
                     span{
                         color: #FFF;
-                        font-family: $font2;
-                        font-weight: 700px;
                     }
                 }
                 .fa-solid{
@@ -83,6 +83,7 @@ main{
         padding: 40px 0;
         h2{
             width: 90%;
+            font-size: 1.3rem;
             margin: 0 auto;
         }
         .restaurants-cards-container{            
@@ -102,11 +103,11 @@ main{
                     height: 70%;
                     object-fit: cover;
                 }
-                h4{
+                h3{
+                    font-size: 1.1rem;
                     margin: 10px 0 5px 10px;
                 }
                 p{
-                    font-family: $font2;
                     font-size: .9rem;
                     margin-left: 10px;
                 }
@@ -177,8 +178,6 @@ main{
             .restaurants{
                 width: 80%;
                 h2{
-                    // width: 50%;
-                    // width: calc(80% - 380px);
                     text-align: center;
                     margin-bottom: 30px;
                 }

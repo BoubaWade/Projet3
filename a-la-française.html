@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/pages/pages.css">
     <title>À la française</title>
 </head>
 <body>
     <header>
-        <a href="/home.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <a href="./home.html"><i class="fa-solid fa-arrow-left"></i></a>
         <img src="./assets/images/logo/ohmyfood.png" alt="logo de oh my food">
     </header>
     <div class="banner-img">
         <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="bannière de à la française">
     </div>
     <main>
-        <div class="title-and-heart-container">
+        <section class="title-and-heart-container">
             <h1>À la française</h1>
             <i class="fa-solid fa-heart"></i>
             <i class="fa-regular fa-heart"></i>
-        </div>
-        <div class="menus-container">
+        </section>
+        <section class="menus-container">
             <div class="entree-container container">
                 <h2>Entrées</h2>
-                <div class="cards-container">
-                    <div class="card">
+                <ul class="cards-container">
+                    <li class="card">
                         <div class="card-description">
                             <h3>Tartare de poulpe acidulé</h3>
                             <p>Aux zestes d'orange</p>
@@ -37,8 +40,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Velouté de légumes d'antan</h3>
                             <p>Carotte, panais, topinambour</p>
@@ -49,8 +52,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Soupe à l'oignon</h3>
                             <p>Revisitée</p>
@@ -61,13 +64,13 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <div class="dishes-container container">
                 <h2>Plats</h2>
-                <div class="cards-container">
-                    <div class="card">
+                <ul class="cards-container">
+                    <li class="card">
                         <div class="card-description">
                             <h3>Coquilles Saint-Jacques</h3>
                             <p>Accompagnées d'une purée de panais</p>
@@ -78,8 +81,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Magret de canard</h3>
                             <p>Et parmentier de pommes de terre</p>
@@ -90,8 +93,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>  
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Pigeonneau d'Ille-et-Vilaine</h3>
                             <p>Sur son lit de gnocchis aux légumes</p>
@@ -102,13 +105,13 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>  
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
             <div class="desserts-container container">
                 <h2>Desserts</h2>
-                <div class="cards-container">
-                    <div class="card">
+                <ul class="cards-container">
+                    <li class="card">
                         <div class="card-description">
                             <h3>Pétales de violettes glacés</h3>
                             <p>Et purée de noisettes</p>
@@ -119,8 +122,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>  
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Fondant au chocolat</h3>
                             <p>Revisité</p>
@@ -131,8 +134,8 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>  
-                    </div>
-                    <div class="card">
+                    </li>
+                    <li class="card">
                         <div class="card-description">
                             <h3>Millefeuille croustillant</h3>
                             <p>Myrtilles et pâte d'amande</p>
@@ -143,14 +146,14 @@
                                 <i class="fa-solid fa-check"></i>
                             </div>
                         </div>  
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </section>
         <input type="button" value="Commander">
     </main> 
     <footer>
-        <h3> ohmyfood</h3>
+        <h2> ohmyfood</h2>
         <ul>
             <li>
                 <i class="fa-solid fa-utensils"></i> 
@@ -161,10 +164,10 @@
                 <span>Devenir partenaire</span>
             </li>
             <li>
-                <span>Mentions légales</span>
+                Mentions légales
             </li>
             <li>
-                <span>Contact</span>
+                Contact
             </li>
         </ul>
     </footer>   

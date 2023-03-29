@@ -33,10 +33,9 @@ main{
         justify-content: space-between;
         align-items: center;
         h1{
-            font-family: $font3;
+            font-family: $font2;
             font-size: 1.3rem;
             padding-left: 0;
-            letter-spacing: .05rem;
         }
         .fa-solid{
             position: absolute;
@@ -76,6 +75,7 @@ main{
             transition: 1.5s ease;
             h2{
                 position: relative;
+                font-weight: 400;
                 text-transform: uppercase;
                 font-size: .9rem;
                 color: $color5;
@@ -100,10 +100,10 @@ main{
                     height: 60px;
                     padding-left: 10px;
                     border-radius: 10px;
-                    font-family: $font2;
                     line-height: 18px;
                     box-shadow: $shadow-box;
                     overflow: hidden;
+                    cursor: pointer;
                     .card-description{
                         width: 80%;
                         margin: auto 0;
@@ -129,7 +129,6 @@ main{
                             width: 50%;
                             margin: auto 0 15px; 
                             font-size: .8rem;
-                            font-weight: 700;
                             transition: .4s ease;
                         }
                         .check-container{
@@ -151,7 +150,6 @@ main{
                     &:hover{
                         .card-description{
                             width: 60%;
-                            // background: pink;
                         }
                         .card-price{
                             transform: translateX(-100%);
@@ -173,17 +171,17 @@ main{
         }
         .entree-container{
             opacity: 0;
-            animation: animEntree 1s ease-in forwards
+            animation: animMenu 1s ease-in forwards
         }
         .dishes-container{
             opacity: 0;
-            animation: animEntree 1s ease-in forwards .5s;
+            animation: animMenu 1s ease-in forwards .5s;
         }
         .desserts-container{
             opacity: 0;
-            animation: animEntree 1s ease-in forwards 1s;
+            animation: animMenu 1s ease-in forwards 1s;
         }
-        @keyframes animEntree{
+        @keyframes animMenu{
             25%{
                 opacity: .25;
             }
@@ -202,6 +200,9 @@ main{
 footer{
     position: relative;
     z-index: 20;
+    h2{
+        font-family: $font2;
+    }
 }
 
 @media screen and (min-width: 426px){
@@ -220,7 +221,7 @@ footer{
         }
         footer{
             flex-direction: row;
-            h3{
+            h2{
                 width: 30%;
                 margin: 0 auto;
                 margin-left: 20px;

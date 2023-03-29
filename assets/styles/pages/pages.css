@@ -2,20 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
 }
 
-@font-face {
-  font-family: "Roboto-bold";
-  src: url(../fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: "Roboto-light";
-  src: url(../fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../fonts/Shrikhand-Regular.ttf);
-}
 a:link, a:visited {
   color: black;
   text-decoration: none;
@@ -23,7 +12,7 @@ a:link, a:visited {
 
 body {
   max-width: 425px;
-  font-family: "Roboto-bold", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (min-width: 426px) {
@@ -68,29 +57,26 @@ footer {
   color: rgba(255, 255, 255, 0.9411764706);
   padding: 20px 0;
 }
-footer h3 {
+footer h2 {
   width: 90%;
   font-family: "Shrikhand", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-bottom: 15px;
 }
 footer ul {
   width: 90%;
-  font-family: "Roboto-light", sans-serif;
-  font-weight: 700;
   line-height: 20px;
 }
 footer ul li {
   font-size: 0.8rem;
-  list-style-type: none;
 }
 
 @media screen and (min-width: 930px) {
   footer {
     flex-direction: row;
   }
-  footer h3 {
+  footer h2 {
     width: 30%;
     margin: 0 auto;
     margin-left: 20px;
@@ -140,7 +126,6 @@ main .title-and-heart-container h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.3rem;
   padding-left: 0;
-  letter-spacing: 0.05rem;
 }
 main .title-and-heart-container .fa-solid {
   position: absolute;
@@ -184,6 +169,7 @@ main .menus-container .container {
 }
 main .menus-container .container h2 {
   position: relative;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.9rem;
   color: rgba(80, 80, 80, 0.8);
@@ -209,10 +195,10 @@ main .menus-container .container .cards-container .card {
   height: 60px;
   padding-left: 10px;
   border-radius: 10px;
-  font-family: "Roboto-light", sans-serif;
   line-height: 18px;
   box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
   overflow: hidden;
+  cursor: pointer;
 }
 main .menus-container .container .cards-container .card .card-description {
   width: 80%;
@@ -240,7 +226,6 @@ main .menus-container .container .cards-container .card .price-and-check-contain
   width: 50%;
   margin: auto 0 15px;
   font-size: 0.8rem;
-  font-weight: 700;
   transition: 0.4s ease;
 }
 main .menus-container .container .cards-container .card .price-and-check-container .check-container {
@@ -280,17 +265,17 @@ main .menus-container .container .cards-container .card:hover .check-container i
 }
 main .menus-container .entree-container {
   opacity: 0;
-  animation: animEntree 1s ease-in forwards;
+  animation: animMenu 1s ease-in forwards;
 }
 main .menus-container .dishes-container {
   opacity: 0;
-  animation: animEntree 1s ease-in forwards 0.5s;
+  animation: animMenu 1s ease-in forwards 0.5s;
 }
 main .menus-container .desserts-container {
   opacity: 0;
-  animation: animEntree 1s ease-in forwards 1s;
+  animation: animMenu 1s ease-in forwards 1s;
 }
-@keyframes animEntree {
+@keyframes animMenu {
   25% {
     opacity: 0.25;
   }
@@ -308,6 +293,9 @@ main .menus-container .desserts-container {
 footer {
   position: relative;
   z-index: 20;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
 }
 
 @media screen and (min-width: 426px) {
@@ -329,7 +317,7 @@ footer {
   body footer {
     flex-direction: row;
   }
-  body footer h3 {
+  body footer h2 {
     width: 30%;
     margin: 0 auto;
     margin-left: 20px;

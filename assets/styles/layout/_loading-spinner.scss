@@ -20,13 +20,9 @@ body{
             opacity: 1;
         }
     }
-    .spinner-container{
-        // width: 150px; 
+    .spinner-container{ 
         width: 100vw;
-        // height: 150px;
         height: 100vh;
-        // background: #000;
-        // z-index: 10;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -40,10 +36,7 @@ body{
             top: calc(50% - 15px);
             left: calc(50% - 15px);
             opacity: 0;
-
-            // transform: translate(-50%, -50%); 
             animation: animSpinner 2s ease;          
-
         }
         .sp1{            
             background: $color1;
