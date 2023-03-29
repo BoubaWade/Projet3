@@ -1,0 +1,15 @@
+input[type=button]{
+    width: 180px;
+    height: 40px;
+    background: linear-gradient(to top, $color1, $color2);
+    color: #FFF;
+    border: none;
+    border-radius: 40px;
+    box-shadow: $shadow-box;
+    cursor: pointer;
+    transition: .3s ease;
+    &:hover{
+        opacity: .8;
+        box-shadow: 2px 5px 10px rgb(80, 80, 80, 0.8);
+    }
+}

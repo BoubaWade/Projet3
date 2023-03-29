@@ -1,0 +1,196 @@
+main{
+    @include center-box;
+    .location-container{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(201, 201, 201, 0.509);
+        color: $color5;
+        font-size: .8rem;
+        .fa-location-dot{
+            margin: 0 10px;
+        }
+    }
+    .title-description-container{
+        width: 100%;
+        background: rgba(215, 214, 214, 0.244);
+        text-align: center;
+        padding: 30px 0 40px;
+        margin-bottom: 50px;
+
+        h1{
+            width:80%;
+            margin: 0 auto;
+            line-height: 25px;
+        }
+        h2{
+            width: 80%;
+            font-family: $font2;
+            font-size: .9rem;
+            font-weight: 500;
+            margin: 10px auto 25px;
+        }
+    }
+    .functioning{
+        width: 90%;
+        .functioning-cards-container{
+            width: 100%;
+            padding: 20px 0 50px;
+            margin-left: 6px;
+            gap: 20px;
+            .functioning-card{
+                height: 50px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                border-radius: 50px;
+                margin-bottom: 15px;
+                box-shadow: $shadow-box;
+                cursor: pointer;
+                h4{
+                    font-size: .9rem;
+                    margin-left: 20px;
+                }
+                p{
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    background: $color1;
+                    left: -12px;
+                    border-radius: 50%;
+                    @include center-box;
+                    span{
+                        color: #FFF;
+                        font-family: $font2;
+                        font-weight: 700px;
+                    }
+                }
+                .fa-solid{
+                    color: rgb(80, 80, 80, 0.8);
+                    margin-left: 32px;
+                }
+                &:hover{
+                    background: #9256dc2c ;
+                }
+            }
+        }
+    }
+    .restaurants{
+        width: 100%;
+        background: rgba(215, 214, 214, 0.244);
+        padding: 40px 0;
+        h2{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .restaurants-cards-container{            
+            width: 90%;
+            @include center-box;
+            margin: 10px auto 0;
+            gap: 25px;
+            .restaurant-card{
+                position:relative;
+                width: 100%;
+                height: 225px;
+                border-radius: 15px;
+                box-shadow: $shadow-box;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 70%;
+                    object-fit: cover;
+                }
+                h4{
+                    margin: 10px 0 5px 10px;
+                }
+                p{
+                    font-family: $font2;
+                    font-size: .9rem;
+                    margin-left: 10px;
+                }
+                .fa-solid{
+                    position: absolute;
+                    font-size: 1.5rem;
+                    right: 30px;
+                    bottom: 25px;
+                    background: -webkit-linear-gradient($color1, $color2);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                    z-index: 20;
+                    transition: .5s ease;  
+                    opacity: 0;
+                    cursor: pointer;
+                    &:hover{                                                
+                        opacity: 1;
+                    }                    
+                }
+                .fa-regular{
+                    position: absolute;
+                    font-size: 1.5rem;
+                    right: 30px;
+                    bottom: 25px;
+                    z-index: 10;
+                }
+                .news-container{
+                    position: absolute;
+                    width: 65px;
+                    height: 23px;
+                    background: $color3;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: 10px;
+                    right: 10px;
+                    border-radius: 2px;
+                    span{
+                        font-size: .7rem;
+                        color: #275f51;
+                    }
+                }
+            }            
+        }
+    }    
+}
+@media screen and (min-width: 930px){
+    body{
+        min-width: 100%;
+        main{
+            .functioning{
+                width: 80%;
+                @include center-box;
+                h2{
+                    margin-bottom: 30px;
+                }
+                .functioning-cards-container{
+                    width: 98%;
+                    display: flex;
+                    justify-content: space-around;
+                    gap: 20px;
+                    .functioning-card{
+                        width: 250px;
+                    }
+                }
+            }
+            .restaurants{
+                width: 80%;
+                h2{
+                    // width: 50%;
+                    // width: calc(80% - 380px);
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                .restaurants-cards-container{
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    .restaurant-card{
+                        width: 380px;
+                    }
+                }
+            }
+        }       
+    }
+}
+

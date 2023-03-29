@@ -1,0 +1,68 @@
+body{
+    header, main, footer{
+        opacity: 0;
+        animation: animOpacity 1s ease-in-out 2.8s forwards;
+    }
+    @keyframes animOpacity{
+        10%{
+            opacity: .1;
+        }
+        25%{
+            opacity: .3;
+        }
+        50%{
+            opacity: .5;
+        }
+        75%{
+            opacity: .8;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .spinner-container{
+        // width: 150px; 
+        width: 100vw;
+        // height: 150px;
+        height: 100vh;
+        // background: #000;
+        // z-index: 10;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .sp1, .sp2, .sp3{
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            border-radius: 50%;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+            opacity: 0;
+
+            // transform: translate(-50%, -50%); 
+            animation: animSpinner 2s ease;          
+
+        }
+        .sp1{            
+            background: $color1;
+            margin: 0 -40px;
+        }
+        .sp2{           
+            background: $color2;
+            animation-delay: .3s;
+        }
+        .sp3{
+            background: $color3;
+            margin: 0 40px;
+            animation-delay: .6s;
+        } 
+    }
+    @keyframes animSpinner {
+        to{
+            opacity: 1;
+            transform: translateY(-40px);    
+        }
+    }
+}

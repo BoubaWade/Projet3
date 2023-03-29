@@ -1,0 +1,38 @@
+footer{
+    @include center-box;
+    background: #000000c7;
+    color: #fffffff0;
+    padding: 20px 0;
+    h3{
+        width: 90%;
+        font-family: $font3;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    ul{
+        width: 90%;
+        font-family: $font2;
+        font-weight: 700;
+        line-height: 20px;
+        li{
+            font-size: .8rem;
+            list-style-type: none;
+        }
+    }    
+}
+@media screen and (min-width: 930px){
+    footer{
+        flex-direction: row;
+        h3{
+            width: 30%;
+            margin: 0 auto;
+            margin-left: 20px;
+        }
+        ul{
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}

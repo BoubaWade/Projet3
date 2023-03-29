@@ -1,0 +1,235 @@
+@import"../settings";
+@import"../layout/header";
+@import"../components/button";
+@import"../layout/footer";
+
+header{
+    position: relative;
+    a{
+        position: absolute;
+        left: 20px;
+    }
+}
+.banner-img{
+    img{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    object-fit: cover;
+    }   
+}
+main{
+    @include center-box;
+    position: relative;
+    background: #FFF;
+    margin-top: -50px;
+    padding: 30px 0;
+    border-radius: 30px 30px 0 0;
+    z-index: 10;
+    .title-and-heart-container{
+        position: relative;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-family: $font3;
+            font-size: 1.3rem;
+            padding-left: 0;
+            letter-spacing: .05rem;
+        }
+        .fa-solid{
+            position: absolute;
+            font-size: 1.5rem;
+            right: 30px;
+            bottom: 10px;
+            background: -webkit-linear-gradient($color1, $color2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            z-index: 20;
+            transition: .5s ease;  
+            opacity: 0;
+            cursor: pointer;
+            &:hover{                                                
+                opacity: 1;
+            }                    
+        }
+        .fa-regular{
+            position: absolute;
+            font-size: 1.5rem;
+            right: 30px;
+            bottom: 10px;
+            z-index: 10;
+        }
+    }
+    .menus-container{
+        width: 95%;
+        @include center-box;
+        padding-top: 20px;
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            transition: 1.5s ease;
+            h2{
+                position: relative;
+                text-transform: uppercase;
+                font-size: .9rem;
+                color: $color5;
+                &::before{
+                    content: " ";
+                    position: absolute;
+                    background: $color3;
+                    width: 35px;
+                    height: 2px;
+                    bottom: -5px;
+                }
+            }
+            .cards-container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+                gap:10px;
+                .card{
+                    display: flex;
+                    justify-content: flex-start;
+                    height: 60px;
+                    padding-left: 10px;
+                    border-radius: 10px;
+                    font-family: $font2;
+                    line-height: 18px;
+                    box-shadow: $shadow-box;
+                    overflow: hidden;
+                    .card-description{
+                        width: 80%;
+                        margin: auto 0;
+                        transition: .4s ease;
+                        h3{
+                            font-size: .9rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                        p{
+                            font-size: .8rem;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                    .price-and-check-container{
+                        width: 40%;
+                        display: flex;
+                        transform: translateX(51%);
+                        .card-price{
+                            width: 50%;
+                            margin: auto 0 15px; 
+                            font-size: .8rem;
+                            font-weight: 700;
+                            transition: .4s ease;
+                        }
+                        .check-container{
+                            width: 50%;
+                            height: 60px;
+                            @include center-box;
+                            background: $color3;
+                            border-radius:  0 10px 10px 0;
+                            transition: .4s ease;
+                            i{ 
+                                background: #FFF;
+                                color: $color3;
+                                font-weight: bold;
+                                padding: 5px;
+                                border-radius: 50%;
+                            }
+                        } 
+                    } 
+                    &:hover{
+                        .card-description{
+                            width: 60%;
+                            // background: pink;
+                        }
+                        .card-price{
+                            transform: translateX(-100%);
+                        }
+                        .check-container{
+                            transform: translateX(-100%);
+                            i{
+                                animation: animCheck .5s ease;
+                            }
+                        }
+                        @keyframes animCheck {
+                            to{
+                                transform: rotate(360deg);
+                            }                            
+                        }                        
+                    }                    
+                }
+            }
+        }
+        .entree-container{
+            opacity: 0;
+            animation: animEntree 1s ease-in forwards
+        }
+        .dishes-container{
+            opacity: 0;
+            animation: animEntree 1s ease-in forwards .5s;
+        }
+        .desserts-container{
+            opacity: 0;
+            animation: animEntree 1s ease-in forwards 1s;
+        }
+        @keyframes animEntree{
+            25%{
+                opacity: .25;
+            }
+            50%{
+                opacity: .5;
+            }
+            75%{
+                opacity: .75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
+footer{
+    position: relative;
+    z-index: 20;
+}
+
+@media screen and (min-width: 426px){
+    body{
+        background: linear-gradient(to left, $color3, $color2, $color1);
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 930px){
+    body{
+         min-width: 100%;
+        .menus-container{
+            flex-direction: row;
+            align-items: flex-start;
+            column-gap: 20px;
+        }
+        footer{
+            flex-direction: row;
+            h3{
+                width: 30%;
+                margin: 0 auto;
+                margin-left: 20px;
+            }
+            ul{
+                width: 70%;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+}

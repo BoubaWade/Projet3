@@ -1,0 +1,367 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand-Regular.ttf);
+}
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  max-width: 425px;
+  font-family: "Roboto-bold", sans-serif;
+}
+
+@media screen and (min-width: 426px) {
+  body {
+    margin: 0 auto;
+  }
+}
+body header, body main, body footer {
+  opacity: 0;
+  animation: animOpacity 1s ease-in-out 2.8s forwards;
+}
+@keyframes animOpacity {
+  10% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body .spinner-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .spinner-container .sp1, body .spinner-container .sp2, body .spinner-container .sp3 {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  opacity: 0;
+  animation: animSpinner 2s ease;
+}
+body .spinner-container .sp1 {
+  background: #9356DC;
+  margin: 0 -40px;
+}
+body .spinner-container .sp2 {
+  background: #FF79DA;
+  animation-delay: 0.3s;
+}
+body .spinner-container .sp3 {
+  background: #99E2D0;
+  margin: 0 40px;
+  animation-delay: 0.6s;
+}
+@keyframes animSpinner {
+  to {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0 2px 5px -2px rgba(80, 80, 80, 0.701);
+}
+header img {
+  width: 150px;
+}
+
+input[type=button] {
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  color: #FFF;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+input[type=button]:hover {
+  opacity: 0.8;
+  box-shadow: 2px 5px 10px rgba(80, 80, 80, 0.8);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .location-container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(201, 201, 201, 0.509);
+  color: rgba(80, 80, 80, 0.8);
+  font-size: 0.8rem;
+}
+main .location-container .fa-location-dot {
+  margin: 0 10px;
+}
+main .title-description-container {
+  width: 100%;
+  background: rgba(215, 214, 214, 0.244);
+  text-align: center;
+  padding: 30px 0 40px;
+  margin-bottom: 50px;
+}
+main .title-description-container h1 {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 25px;
+}
+main .title-description-container h2 {
+  width: 80%;
+  font-family: "Roboto-light", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 10px auto 25px;
+}
+main .functioning {
+  width: 90%;
+}
+main .functioning .functioning-cards-container {
+  width: 100%;
+  padding: 20px 0 50px;
+  margin-left: 6px;
+  gap: 20px;
+}
+main .functioning .functioning-cards-container .functioning-card {
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
+  cursor: pointer;
+}
+main .functioning .functioning-cards-container .functioning-card h4 {
+  font-size: 0.9rem;
+  margin-left: 20px;
+}
+main .functioning .functioning-cards-container .functioning-card p {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background: #9356DC;
+  left: -12px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .functioning .functioning-cards-container .functioning-card p span {
+  color: #FFF;
+  font-family: "Roboto-light", sans-serif;
+  font-weight: 700px;
+}
+main .functioning .functioning-cards-container .functioning-card .fa-solid {
+  color: rgba(80, 80, 80, 0.8);
+  margin-left: 32px;
+}
+main .functioning .functioning-cards-container .functioning-card:hover {
+  background: rgba(146, 86, 220, 0.1725490196);
+}
+main .restaurants {
+  width: 100%;
+  background: rgba(215, 214, 214, 0.244);
+  padding: 40px 0;
+}
+main .restaurants h2 {
+  width: 90%;
+  margin: 0 auto;
+}
+main .restaurants .restaurants-cards-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto 0;
+  gap: 25px;
+}
+main .restaurants .restaurants-cards-container .restaurant-card {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
+  overflow: hidden;
+}
+main .restaurants .restaurants-cards-container .restaurant-card img {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .restaurants .restaurants-cards-container .restaurant-card h4 {
+  margin: 10px 0 5px 10px;
+}
+main .restaurants .restaurants-cards-container .restaurant-card p {
+  font-family: "Roboto-light", sans-serif;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+main .restaurants .restaurants-cards-container .restaurant-card .fa-solid {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30px;
+  bottom: 25px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 20;
+  transition: 0.5s ease;
+  opacity: 0;
+  cursor: pointer;
+}
+main .restaurants .restaurants-cards-container .restaurant-card .fa-solid:hover {
+  opacity: 1;
+}
+main .restaurants .restaurants-cards-container .restaurant-card .fa-regular {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30px;
+  bottom: 25px;
+  z-index: 10;
+}
+main .restaurants .restaurants-cards-container .restaurant-card .news-container {
+  position: absolute;
+  width: 65px;
+  height: 23px;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  border-radius: 2px;
+}
+main .restaurants .restaurants-cards-container .restaurant-card .news-container span {
+  font-size: 0.7rem;
+  color: #275f51;
+}
+
+@media screen and (min-width: 930px) {
+  body {
+    min-width: 100%;
+  }
+  body main .functioning {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body main .functioning h2 {
+    margin-bottom: 30px;
+  }
+  body main .functioning .functioning-cards-container {
+    width: 98%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  body main .functioning .functioning-cards-container .functioning-card {
+    width: 250px;
+  }
+  body main .restaurants {
+    width: 80%;
+  }
+  body main .restaurants h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  body main .restaurants .restaurants-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body main .restaurants .restaurants-cards-container .restaurant-card {
+    width: 380px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7803921569);
+  color: rgba(255, 255, 255, 0.9411764706);
+  padding: 20px 0;
+}
+footer h3 {
+  width: 90%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+footer ul {
+  width: 90%;
+  font-family: "Roboto-light", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+}
+footer ul li {
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 930px) {
+  footer {
+    flex-direction: row;
+  }
+  footer h3 {
+    width: 30%;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+  footer ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=index.css.map */

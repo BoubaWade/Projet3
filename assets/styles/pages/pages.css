@@ -1,0 +1,342 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(../fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-light";
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand-Regular.ttf);
+}
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  max-width: 425px;
+  font-family: "Roboto-bold", sans-serif;
+}
+
+@media screen and (min-width: 426px) {
+  body {
+    margin: 0 auto;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0 2px 5px -2px rgba(80, 80, 80, 0.701);
+}
+header img {
+  width: 150px;
+}
+
+input[type=button] {
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  color: #FFF;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+input[type=button]:hover {
+  opacity: 0.8;
+  box-shadow: 2px 5px 10px rgba(80, 80, 80, 0.8);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7803921569);
+  color: rgba(255, 255, 255, 0.9411764706);
+  padding: 20px 0;
+}
+footer h3 {
+  width: 90%;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+footer ul {
+  width: 90%;
+  font-family: "Roboto-light", sans-serif;
+  font-weight: 700;
+  line-height: 20px;
+}
+footer ul li {
+  font-size: 0.8rem;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 930px) {
+  footer {
+    flex-direction: row;
+  }
+  footer h3 {
+    width: 30%;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+  footer ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+header {
+  position: relative;
+}
+header a {
+  position: absolute;
+  left: 20px;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #FFF;
+  margin-top: -50px;
+  padding: 30px 0;
+  border-radius: 30px 30px 0 0;
+  z-index: 10;
+}
+main .title-and-heart-container {
+  position: relative;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .title-and-heart-container h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.3rem;
+  padding-left: 0;
+  letter-spacing: 0.05rem;
+}
+main .title-and-heart-container .fa-solid {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30px;
+  bottom: 10px;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 20;
+  transition: 0.5s ease;
+  opacity: 0;
+  cursor: pointer;
+}
+main .title-and-heart-container .fa-solid:hover {
+  opacity: 1;
+}
+main .title-and-heart-container .fa-regular {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30px;
+  bottom: 10px;
+  z-index: 10;
+}
+main .menus-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+main .menus-container .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  transition: 1.5s ease;
+}
+main .menus-container .container h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: rgba(80, 80, 80, 0.8);
+}
+main .menus-container .container h2::before {
+  content: " ";
+  position: absolute;
+  background: #99E2D0;
+  width: 35px;
+  height: 2px;
+  bottom: -5px;
+}
+main .menus-container .container .cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+main .menus-container .container .cards-container .card {
+  display: flex;
+  justify-content: flex-start;
+  height: 60px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-family: "Roboto-light", sans-serif;
+  line-height: 18px;
+  box-shadow: 0 2px 10px rgba(80, 80, 80, 0.502);
+  overflow: hidden;
+}
+main .menus-container .container .cards-container .card .card-description {
+  width: 80%;
+  margin: auto 0;
+  transition: 0.4s ease;
+}
+main .menus-container .container .cards-container .card .card-description h3 {
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .menus-container .container .cards-container .card .card-description p {
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+main .menus-container .container .cards-container .card .price-and-check-container {
+  width: 40%;
+  display: flex;
+  transform: translateX(51%);
+}
+main .menus-container .container .cards-container .card .price-and-check-container .card-price {
+  width: 50%;
+  margin: auto 0 15px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: 0.4s ease;
+}
+main .menus-container .container .cards-container .card .price-and-check-container .check-container {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  transition: 0.4s ease;
+}
+main .menus-container .container .cards-container .card .price-and-check-container .check-container i {
+  background: #FFF;
+  color: #99E2D0;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+}
+main .menus-container .container .cards-container .card:hover .card-description {
+  width: 60%;
+}
+main .menus-container .container .cards-container .card:hover .card-price {
+  transform: translateX(-100%);
+}
+main .menus-container .container .cards-container .card:hover .check-container {
+  transform: translateX(-100%);
+}
+main .menus-container .container .cards-container .card:hover .check-container i {
+  animation: animCheck 0.5s ease;
+}
+@keyframes animCheck {
+  to {
+    transform: rotate(360deg);
+  }
+}
+main .menus-container .entree-container {
+  opacity: 0;
+  animation: animEntree 1s ease-in forwards;
+}
+main .menus-container .dishes-container {
+  opacity: 0;
+  animation: animEntree 1s ease-in forwards 0.5s;
+}
+main .menus-container .desserts-container {
+  opacity: 0;
+  animation: animEntree 1s ease-in forwards 1s;
+}
+@keyframes animEntree {
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  position: relative;
+  z-index: 20;
+}
+
+@media screen and (min-width: 426px) {
+  body {
+    background: linear-gradient(to left, #99E2D0, #FF79DA, #9356DC);
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 930px) {
+  body {
+    min-width: 100%;
+  }
+  body .menus-container {
+    flex-direction: row;
+    align-items: flex-start;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  body footer {
+    flex-direction: row;
+  }
+  body footer h3 {
+    width: 30%;
+    margin: 0 auto;
+    margin-left: 20px;
+  }
+  body footer ul {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=pages.css.map */
