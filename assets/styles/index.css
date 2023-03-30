@@ -277,10 +277,13 @@ main .restaurants .restaurants-cards-container .restaurant-card .news-container 
 
 @media screen and (min-width: 930px) {
   body {
-    min-width: 100%;
+    min-width: 80%;
+  }
+  body header {
+    background: linear-gradient(to left, #99E2D0, #FF79DA, #9356DC);
   }
   body main .functioning {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,7 +302,7 @@ main .restaurants .restaurants-cards-container .restaurant-card .news-container 
     width: 250px;
   }
   body main .restaurants {
-    width: 80%;
+    width: 100%;
   }
   body main .restaurants h2 {
     text-align: center;

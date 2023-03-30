@@ -157,10 +157,13 @@ main{
 }
 @media screen and (min-width: 930px){
     body{
-        min-width: 100%;
+        min-width: 80%;
+        header{
+        background: linear-gradient(to left, $color3, $color2, $color1);
+        }
         main{
             .functioning{
-                width: 80%;
+                width: 100%;
                 @include center-box;
                 h2{
                     margin-bottom: 30px;
@@ -176,7 +179,7 @@ main{
                 }
             }
             .restaurants{
-                width: 80%;
+                width: 100%;
                 h2{
                     text-align: center;
                     margin-bottom: 30px;
