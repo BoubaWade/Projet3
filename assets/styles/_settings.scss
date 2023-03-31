@@ -26,6 +26,7 @@ a:link, a:visited{
   body{
     max-width: 425px;
     font-family: $font1;
+    margin: 0 auto;
   }
   @media screen and (min-width: 426px){
     body{
