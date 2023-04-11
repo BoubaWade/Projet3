@@ -66,6 +66,32 @@ main{
         width: 95%;
         @include center-box;
         padding-top: 20px;
+        .entree-container{
+            opacity: 0;
+            animation: animMenu 1s ease-in forwards
+        }
+        .dishes-container{
+            opacity: 0;
+            animation: animMenu 1s ease-in forwards .5s;
+        }
+        .desserts-container{
+            opacity: 0;
+            animation: animMenu 1s ease-in forwards 1s;
+        }
+        @keyframes animMenu{
+            25%{
+                opacity: .25;
+            }
+            50%{
+                opacity: .5;
+            }
+            75%{
+                opacity: .75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
         .container{
             width: 100%;
             display: flex;
@@ -96,10 +122,9 @@ main{
                 gap:10px;
                 .card{
                     display: flex;
-                    justify-content: flex-start;
                     height: 60px;
                     padding-left: 10px;
-                    border-radius: 10px;
+                    border-radius: 15px;
                     line-height: 18px;
                     box-shadow: $shadow-box;
                     overflow: hidden;
@@ -125,9 +150,12 @@ main{
                         width: 40%;
                         display: flex;
                         transform: translateX(51%);
+                        margin: auto 0;
                         .card-price{
                             width: 50%;
-                            margin: auto 0 15px; 
+                            margin: auto 0 15px;
+                            text-align: center;
+                            font-weight: 700;
                             font-size: .8rem;
                             transition: .4s ease;
                         }
@@ -164,37 +192,12 @@ main{
                             to{
                                 transform: rotate(360deg);
                             }                            
-                        }                        
+                        }                       
                     }                    
                 }
             }
         }
-        .entree-container{
-            opacity: 0;
-            animation: animMenu 1s ease-in forwards
-        }
-        .dishes-container{
-            opacity: 0;
-            animation: animMenu 1s ease-in forwards .5s;
-        }
-        .desserts-container{
-            opacity: 0;
-            animation: animMenu 1s ease-in forwards 1s;
-        }
-        @keyframes animMenu{
-            25%{
-                opacity: .25;
-            }
-            50%{
-                opacity: .5;
-            }
-            75%{
-                opacity: .75;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
+        
     }
 }
 footer{
