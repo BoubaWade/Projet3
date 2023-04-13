@@ -3,6 +3,9 @@ footer{
     background: #000000c7;
     color: #fffffff0;
     padding: 20px 0;
+    a:link{
+        color: #fffffff0;
+    }
     h2{
         width: 90%;
         font-family: $font2;
@@ -13,9 +16,9 @@ footer{
     ul{
         width: 90%;
         line-height: 20px;
-        li{
+        li{    
             font-size: .8rem;
-            cursor: pointer;
+            cursor: pointer;        
         }
     }    
 }

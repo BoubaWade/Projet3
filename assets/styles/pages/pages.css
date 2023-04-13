@@ -58,6 +58,9 @@ footer {
   color: rgba(255, 255, 255, 0.9411764706);
   padding: 20px 0;
 }
+footer a:link {
+  color: rgba(255, 255, 255, 0.9411764706);
+}
 footer h2 {
   width: 90%;
   font-family: "Shrikhand", sans-serif;

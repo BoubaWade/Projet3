@@ -245,7 +245,6 @@ main .restaurants .restaurants-cards-container .restaurant-card .fa-solid {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: 20;
-  transition: 0.5s ease;
   opacity: 0;
   cursor: pointer;
 }
@@ -322,6 +321,9 @@ footer {
   background: rgba(0, 0, 0, 0.7803921569);
   color: rgba(255, 255, 255, 0.9411764706);
   padding: 20px 0;
+}
+footer a:link {
+  color: rgba(255, 255, 255, 0.9411764706);
 }
 footer h2 {
   width: 90%;
